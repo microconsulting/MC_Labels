@@ -1,81 +1,63 @@
-# Ignore invisible files/folders except .gitignore
-.*
-!.gitignore
-!.gitattributes
+# 4D project architecture
+######################
+Data
+Logs
+*/Project/DerivedData
+Trash
+userPreferences.*
+BuildAppOM.4DSettings
+Final Application
+Client Server executable
+Default Data
+Macros v2
+Sauvegardes 4D
+Versioning
+Resources/Cache
+Settings/settings.4dSettings
+*/Libraries
+Archives
+Scripts/Icon*
+Replaced Files*
+Components/Cache
+Installeurs
+*_BuildAuto
+*_component/Resources/en.lproj/syntaxEN.json
 
-#--------------------------------
-# Ignore data file
-#--------------------------------
-[dD][aA][tT][aA]/
+# Don't need the data file, indexes, symbols, or journal
 *.4DD
-*.4DIndx
-*.4DIndy
 *.Match
-*.journal
-
-#--------------------------------
-# Ignore derived data
-#--------------------------------
-Project/DerivedData/
-
-#--------------------------------
-# Ignore settings & preferences
-#--------------------------------
-Preferences/
-!4DPop AppMaker.*
-
-Settings/
-!buildApp.4DSettings
-
-userPreferences.*/
-
-#--------------------------------
-# Don't ignore Forms
-#--------------------------------
-!Project/Sources/Forms/Preferences/
-!Project/Sources/Forms/Settings/
-!Project/Sources/Forms/[dD][aA][tT][aA]/
-
-#--------------------------------
-# Ignore Trash
-#--------------------------------
-Project/Trash/
-
-#--------------------------------
-# Ignore backup
-#--------------------------------
-*.4BK
-backupHistory.json
-
-#--------------------------------
-# Miscellaneous
-#--------------------------------
-*__Orphan__*
+*.4DB
+*.4DIndx
 *symbols.txt
+*.journal
+*.app
+*.match
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 ehthumbs.db
 Thumbs.db
 
-Resources/php.ini
+# Build related files #
+#######################
+*.icns
+*.ico
 
-Components/
-!Build/Components
+# Allow #
+#######################
+#!/DataTestCases/*/*.4DD
 
-Project/Sources/Methods/Method*.4dm
-Project/Sources/Methods/00_*.4dm
+#!/Data/Démo/OM Business.4DD
+#!/Data/Démo/OM Finance.4DD
+#!/Data/Démo/BiblioMaker.4DD
 
-Libraries/lib4d-arm64.dylib
-
-DEV/
-
-#--------------------------------
-# Don't ignore .github workflow
-#--------------------------------
-
-!.github/
-!.github/**/.*
-.github/.DS_Store
-
-#--------------------------------
-# Added by user
-#--------------------------------
-Project/Sources/dependencies.json
+# Modifications #
+#######################
+# MK 20.12.22, added modifications section + ignored .Match files
+# SB 20.02.23, ignore Settings:settings.4dSettings
+# MK 26.01.24, added !/DataTestCases/*/*.4DD to allow .4DD files in that folder.

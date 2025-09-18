@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Preferences4D>
 
   <BuildApp>
@@ -23,11 +23,11 @@
       <BuildServerApplication>False</BuildServerApplication>
       <LastDataPathLookup>ByAppName</LastDataPathLookup>
       <MacCompiledDatabaseToWinIncludeIt>False</MacCompiledDatabaseToWinIncludeIt>
-      <MacCompiledDatabaseToWin/>
+      <MacCompiledDatabaseToWin></MacCompiledDatabaseToWin>
       <ServerEmbedsProjectDirectoryFile>False</ServerEmbedsProjectDirectoryFile>
       <BuildCSUpgradeable>False</BuildCSUpgradeable>
       <CurrentVers>1</CurrentVers>
-      <HardLink/>
+      <HardLink></HardLink>
     </CS>
     <BuildApplicationName>MC_Labels</BuildApplicationName>
     <BuildMacDestFolder>:MC_Labels_Build:</BuildMacDestFolder>
@@ -47,6 +47,7 @@
       <Item6>4D Widgets</Item6>
       <Item7>4D Progress</Item7>
       <Item8>4D AIKit</Item8>
+      <Item9>4D Labels</Item9>
     </ArrayExcludedComponentName>
     <ArrayExcludedModuleName>
       <ItemsCount>5</ItemsCount>

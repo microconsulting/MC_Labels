@@ -3,7 +3,7 @@ Preemptive: ✅
 Parameters:
 $B_GetInteger, Boolean: True = Get a Longint, False = Get a Text-->
 
-# Method IL_GetVersion
+# Method ILBL_GetVersion
 Get the text or longint version of the component.
 
 ### Preemptive: ✅

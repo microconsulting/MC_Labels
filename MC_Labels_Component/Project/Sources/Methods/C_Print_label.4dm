@@ -1,4 +1,4 @@
-//%attributes = {"invisible":true,"shared":true}
+//%attributes = {"invisible":true}
 // ----------------------------------------------------
 // Project method : C_Print_label
 // Database: 4D Labels

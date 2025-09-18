@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true,"shared":true}
-// IL_EditLabel
+// ILBL_EditLabel
 // Goal: Show label editor
 // Parameters:
 // Author and creation date: FD 16.09.2025

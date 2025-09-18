@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true,"shared":true}
-// IL_PrintLabel
+// ILBL_PrintLabel
 // Goal: Print the label
 // Parameters:
 // Author and creation date: FD 17.09.2025

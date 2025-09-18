@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true}
-// IL_IsModified
+// ILBL_IsModified
 // Goal: return if the label has been modified
 // Parameters:
 // Author and creation date: FD 17.09.2025

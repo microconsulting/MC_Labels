@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true}
-// IL_SaveLabel
+// ILBL_SaveLabel
 // Goal: Save current label format and return it in blob in returned object
 // Parameters:
 // Author and creation date: FD 17.09.2025

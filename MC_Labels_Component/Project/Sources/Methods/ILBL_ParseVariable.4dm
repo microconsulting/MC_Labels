@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true}
-// IL_ParseVariable
+// ILBL_ParseVariable
 // Goal: Parse a variable containing the label content
 // Parameters:
 // Author and creation date: FD 17.09.2025

@@ -45,7 +45,7 @@ Case of
 			: ($Txt_action="ok")
 				
 				//save
-				If (IL_SaveLabel)
+				If (ILBL_SaveLabel)
 					
 					ACCEPT:C269
 					

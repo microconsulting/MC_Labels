@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true,"shared":true,"preemptive":"capable"}
-// IL_GetVersion
+// ILBL_GetVersion
 // Goal: Get the text or longint version of the component
 // Parameters:
 // $B_GetInteger, Boolean: True = Get a Longint, False = Get a Text
@@ -10,7 +10,7 @@
 #DECLARE($B_GetInteger : Boolean) : Variant
 
 If ($B_GetInteger)
-	return _VersionToInt(cs.Globals.me.VERSION)
+	return _VersionToInt(cs:C1710.Globals.me.VERSION)
 End if 
 
-return cs.Globals.me.VERSION
+return cs:C1710.Globals.me.VERSION

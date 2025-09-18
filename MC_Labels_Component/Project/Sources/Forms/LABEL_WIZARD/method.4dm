@@ -32,7 +32,7 @@ Case of
 		//init the dynamic object
 		$O_Param:=New object:C1471(\
 			"path"; C_LABEL_DOCUMENT; \
-			"dom"; IL_ParseVariable(Form:C1466.X_LabelContent; True:C214))
+			"dom"; ILBL_ParseVariable(Form:C1466.X_LabelContent; True:C214))
 		
 		DOM GET XML ATTRIBUTE BY NAME:C728(DOM Find XML element by ID:C1010($O_Param.dom; "form"); "name"; $T_FormName)
 		OB SET:C1220($O_Param; \
@@ -150,7 +150,7 @@ Case of
 		//________________________________________
 	: ($Lon_formEvent=On Close Box:K2:21)
 		
-		If (IL_IsModified)  //################################################
+		If (ILBL_IsModified)  //################################################
 			
 			If (FORM Get current page:C276#$kLon_messagePage)
 				

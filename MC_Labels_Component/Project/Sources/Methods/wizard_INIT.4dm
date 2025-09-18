@@ -5,6 +5,9 @@
 // ID[E9019810C6A346A4804BB0DF82566898]
 // Created #16-12-2014 by Vincent de Lachaux
 // ----------------------------------------------------
+// FD 18.09.25, removed load and save buttons
+// ----------------------------------------------------
+
 #DECLARE($init : Boolean)
 
 
@@ -99,21 +102,23 @@ End if
 // MARK:-Initialize toolbar
 $objects:=[]
 
-$objects.push(New object:C1471(\
+/*
+$objects.push(New object(\
 "object"; "toolbar.load"; \
 "type"; "button"; \
-"visible"; True:C214; \
+"visible"; True; \
 "right-offset"; 10))
 
-$objects.push(New object:C1471(\
+$objects.push(New object(\
 "object"; "toolbar.save"; \
 "type"; "button"; \
-"visible"; True:C214))
+"visible"; True))
 
-$objects.push(New object:C1471(\
+$objects.push(New object(\
 "object"; "toolbar.opened.sep.1"; \
 "type"; "separator"; \
-"visible"; True:C214))
+"visible"; True))
+*/
 
 $objects.push(New object:C1471(\
 "object"; "toolbar.preview"; \
@@ -146,6 +151,7 @@ $objects.push(New object:C1471(\
 "visible"; $visible))
 
 ALIGN_OBJECTS({toolbar: $objects})
+
 
 // Set label's page as default
 OBJECT SET VALUE:C1742("toolbar.tabs"; 1)

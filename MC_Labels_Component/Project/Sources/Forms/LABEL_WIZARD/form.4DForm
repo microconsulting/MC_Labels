@@ -107,9 +107,9 @@
 				},
 				"toolbar.load": {
 					"type": "button",
-					"top": 21,
-					"left": 16,
-					"width": 67,
+					"top": 31,
+					"left": 863,
+					"width": 50,
 					"height": 51,
 					"focusable": false,
 					"text": ":xliff:load",
@@ -120,7 +120,8 @@
 					"events": [
 						"onClick",
 						"onAlternateClick"
-					]
+					],
+					"visibility": "hidden"
 				},
 				"Line1": {
 					"type": "line",
@@ -134,10 +135,10 @@
 				},
 				"toolbar.preview": {
 					"type": "button",
-					"top": 21,
-					"left": 149,
-					"width": 50,
-					"height": 51,
+					"top": 22,
+					"left": 22,
+					"width": 110,
+					"height": 50,
 					"focusable": false,
 					"text": ":xliff:preview",
 					"icon": "/RESOURCES/images/tbPreview.png",
@@ -150,8 +151,8 @@
 				},
 				"toolbar.save": {
 					"type": "button",
-					"top": 21,
-					"left": 79,
+					"top": 31,
+					"left": 926,
 					"width": 50,
 					"height": 51,
 					"focusable": false,
@@ -162,12 +163,13 @@
 					"method": "ObjectMethods/toolbar.save.4dm",
 					"events": [
 						"onClick"
-					]
+					],
+					"visibility": "hidden"
 				},
 				"toolbar.tabs": {
 					"type": "subform",
-					"top": 19,
-					"left": 288,
+					"top": 20,
+					"left": 262,
 					"width": 220,
 					"height": 59,
 					"dataSourceTypeHint": "number",
@@ -201,10 +203,10 @@
 				},
 				"toolbar.print": {
 					"type": "button",
-					"top": 21,
-					"left": 210,
-					"width": 50,
-					"height": 51,
+					"top": 22,
+					"left": 132,
+					"width": 110,
+					"height": 50,
 					"focusable": false,
 					"text": ":xliff:print",
 					"icon": "/RESOURCES/Images/tbPrint.png",
@@ -255,28 +257,10 @@
 					"height": 0,
 					"startPoint": "topLeft"
 				},
-				"toolbar.opened.sep.1": {
-					"type": "line",
-					"top": 10,
-					"left": 135,
-					"width": 0,
-					"height": 72,
-					"stroke": "#c0c0c0",
-					"startPoint": "topLeft"
-				},
 				"toolbar.opened.sep.2": {
 					"type": "line",
 					"top": 10,
-					"left": 280,
-					"width": 0,
-					"height": 72,
-					"stroke": "#c0c0c0",
-					"startPoint": "topLeft"
-				},
-				"toolbar.opened.sep.3": {
-					"type": "line",
-					"top": 10,
-					"left": 525,
+					"left": 252,
 					"width": 0,
 					"height": 72,
 					"stroke": "#c0c0c0",
@@ -284,7 +268,7 @@
 				},
 				"Line2": {
 					"type": "line",
-					"top": 68,
+					"top": 69,
 					"left": 17,
 					"width": 714,
 					"height": 0,
@@ -464,8 +448,8 @@
 				"toolbar.form": {
 					"type": "button",
 					"top": 21,
-					"left": 513,
-					"width": 106,
+					"left": 502,
+					"width": 110,
 					"height": 51,
 					"focusable": false,
 					"text": ":xliff:formToUse",
@@ -478,6 +462,15 @@
 						"onClick",
 						"onAlternateClick"
 					]
+				},
+				"toolbar.opened.sep.3": {
+					"type": "line",
+					"top": 10,
+					"left": 492,
+					"width": 0,
+					"height": 72,
+					"stroke": "#c0c0c0",
+					"startPoint": "topLeft"
 				}
 			}
 		},
@@ -676,5 +669,5 @@
 			"View 9": {}
 		}
 	},
-	"geometryStamp": 19
+	"geometryStamp": 149
 }

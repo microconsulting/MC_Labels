@@ -9,7 +9,8 @@ var $Boo_scrollbar; $boo_light : Boolean
 var $kLon_messagePage; $Lon_; $Lon_bottom; $Lon_color; $Lon_formEvent; $Lon_page : Integer
 var $Lon_top : Integer
 var $Pic_buffer : Picture
-var $Txt_object : Text
+var $Txt_object; $T_Origin; $T_FormName : Text
+var $O_Param : Object
 
 // ----------------------------------------------------
 // Initialisations
@@ -29,19 +30,30 @@ Case of
 		wizard_INIT(True:C214)
 		
 		//init the dynamic object
-		(OBJECT Get pointer:C1124(Object named:K67:5; "object"))->:=New object:C1471(\
+		$O_Param:=New object:C1471(\
 			"path"; C_LABEL_DOCUMENT; \
-			"field-list-enabled"; True:C214; \
-			"dom"; label_Parse_document(C_LABEL_DOCUMENT; True:C214))
+			"dom"; IL_ParseVariable(Form:C1466.X_LabelContent; True:C214))
+		
+		DOM GET XML ATTRIBUTE BY NAME:C728(DOM Find XML element by ID:C1010($O_Param.dom; "form"); "name"; $T_FormName)
+		OB SET:C1220($O_Param; \
+			"field-list-enabled"; Length:C16($T_FormName)=0)
+		$O_Param.converted:=(OBJECT Get pointer:C1124(Object named:K67:5; "object"))->converted
+		
+		If ((OBJECT Get pointer:C1124(Object named:K67:5; "object"))->converted)
+			DOM EXPORT TO VAR:C863($O_Param.dom; $T_Origin)
+			$O_Param.origin:=$T_Origin
+		Else 
+			$O_Param.origin:=BLOB to text:C555(Form:C1466.X_LabelContent; UTF8 C string:K22:15)
+		End if 
+		
+		(OBJECT Get pointer:C1124(Object named:K67:5; "object"))->:=$O_Param
 		
 		wizard_GOTO_PAGE(1)
 		
 		$boo_light:=(FORM Get color scheme:C1761="light")
 		OBJECT SET VISIBLE:C603(*; "@background@"; $boo_light)
 		
-		
 		SET TIMER:C645(-1)
-		
 		
 		//______________________________________________________
 	: ($Lon_formEvent=On Unload:K2:2)
@@ -138,7 +150,7 @@ Case of
 		//________________________________________
 	: ($Lon_formEvent=On Close Box:K2:21)
 		
-		If (False:C215)  //################################################
+		If (IL_IsModified)  //################################################
 			
 			If (FORM Get current page:C276#$kLon_messagePage)
 				
@@ -147,8 +159,8 @@ Case of
 				(OBJECT Get pointer:C1124(Object named:K67:5; "Variable"))->:=$Pic_buffer
 				
 				mess_DISPLAY(New object:C1471(\
-					"message"; Localized string:C991("areYouSure"); \
-					"ok-label"; ".Save"; \
+					"message"; Localized string:C991("doYouWantToSaveChanges"); \
+					"ok-label"; Localized string:C991("save"); \
 					"no-label"; Localized string:C991("doNotSave"); \
 					"cancel-label"; Localized string:C991("cancel"); \
 					"doNotAskAgain"; False:C215; \

@@ -583,7 +583,7 @@
 					"left": 165,
 					"width": 420,
 					"height": 160,
-					"dataSourceTypeHint": "undefined",
+					"dataSourceTypeHint": "object",
 					"detailForm": "MESSAGE",
 					"deletableInList": false,
 					"doubleClickInRowAction": "editSubrecord",

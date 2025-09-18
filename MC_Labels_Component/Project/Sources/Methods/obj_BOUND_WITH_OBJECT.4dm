@@ -41,7 +41,7 @@ Else
 	ABORT:C156
 	
 End if 
-
+TRACE:C157
 // ----------------------------------------------------
 If (Length:C16($Txt_name)=0)
 	
@@ -50,7 +50,7 @@ If (Length:C16($Txt_name)=0)
 	
 Else 
 	
-	(OBJECT Get pointer:C1124(Object named:K67:5; "alert.box"))->:=OB Copy:C1225(Obj_buffer)
+	(OBJECT Get pointer:C1124(Object named:K67:5; $Txt_name))->:=OB Copy:C1225(Obj_buffer)
 	//EXECUTE FORMULA("(:C1124(:K67:5;\""+$Txt_name+"\"))->:=:C1225(Obj_buffer)")
 	
 End if 

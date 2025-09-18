@@ -2,8 +2,8 @@
 // Goal:
 // Author and creation date: MK 20.08.24
 /* Changes (Author date and goal):
+   FD 18.09.25, 8.0b1
 */
-
 
 /**
 #class
@@ -18,4 +18,4 @@ property VERSION : Text
 singleton Class constructor
 	
 Function get VERSION : Text
-	return "0.0.0"
+	return "8.0b1"

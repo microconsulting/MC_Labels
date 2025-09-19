@@ -461,7 +461,8 @@
 					"events": [
 						"onClick",
 						"onAlternateClick"
-					]
+					],
+					"visibility": "hidden"
 				},
 				"toolbar.opened.sep.3": {
 					"type": "line",
@@ -470,7 +471,8 @@
 					"width": 0,
 					"height": 72,
 					"stroke": "#c0c0c0",
-					"startPoint": "topLeft"
+					"startPoint": "topLeft",
+					"visibility": "hidden"
 				}
 			}
 		},
@@ -669,5 +671,5 @@
 			"View 9": {}
 		}
 	},
-	"geometryStamp": 149
+	"geometryStamp": 151
 }

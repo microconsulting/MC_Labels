@@ -1182,7 +1182,8 @@
 						"onDrop",
 						"onDataChange",
 						"onDragOver"
-					]
+					],
+					"hideFocusRing": true
 				},
 				"TextEdit": {
 					"type": "input",

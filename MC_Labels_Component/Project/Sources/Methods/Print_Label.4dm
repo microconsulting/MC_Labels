@@ -5,7 +5,10 @@
 // ID[6349290659384A0499FF195E19B79FC1]
 // Created #19-2-2015 by Vincent de Lachaux
 // ----------------------------------------------------
-#DECLARE($tableNumber : Integer; $root : Text; $preview : Boolean) : Integer
+// FD 18.09.25, added $F_ProgressCallback parameter
+// ----------------------------------------------------
+
+#DECLARE($tableNumber : Integer; $root : Text; $preview : Boolean; $F_ProgressCallback : 4D:C1709.Function) : Integer
 
 If (False:C215)
 	C_LONGINT:C283(Print_Label; $1)
@@ -27,7 +30,7 @@ var $fontStyle; $height; $horizontalGap; $horizontalStartIndex; $i; $labelCount 
 var $labelHeight; $labelWidth; $left; $leftMargin; $leftPos; $linefeed : Integer
 var $objectNumber; $objecty; $perRecord; $plus; $right; $rightMargin : Integer
 var $rows; $startIndex; $top; $topMargin; $topPos; $type : Integer
-var $verticalGap; $verticalStartIndex; $width; $xOffset; $yOffset : Integer
+var $verticalGap; $verticalStartIndex; $width; $xOffset; $yOffset; $L_CountParam; $n; $nTot : Integer
 var $tablePtr : Pointer
 var $o; $object : Object
 var $tables : Collection
@@ -36,7 +39,8 @@ ARRAY TEXT:C222($formObjects; 0)
 
 // ----------------------------------------------------
 // Required parameters
-ASSERT:C1129(Count parameters:C259>=2)
+$L_CountParam:=Count parameters:C259
+ASSERT:C1129($L_CountParam>=2)
 
 COMPILER_LABELS
 COMPILER_PRINT
@@ -244,7 +248,15 @@ If (print_ERROR=0)
 		FORM LOAD:C1103($tablePtr->; $formName)
 		FORM GET OBJECTS:C898($formObjects; *)
 		
+		// MARK:-: main loop - Form
+		$n:=0
+		$nTot:=Records in selection:C76($tablePtr->)
 		Repeat 
+			
+			If ($L_CountParam>=4)
+				$n+=1
+				$F_ProgressCallback.call(Null:C1517; $n; $nTot)
+			End if 
 			
 			If (Length:C16($labelMethod)#0)
 				
@@ -326,7 +338,15 @@ If (print_ERROR=0)
 		$objects:=DOM Find XML element by ID:C1010($root; "objects")
 		$objectNumber:=DOM Count XML elements:C726($objects; "object")
 		
+		// MARK:-: main loop - format
+		$n:=0
+		$nTot:=Records in selection:C76($tablePtr->)
 		Repeat 
+			
+			If ($L_CountParam>=4)
+				$n+=1
+				$F_ProgressCallback.call(Null:C1517; $n; $nTot)
+			End if 
 			
 			If (Length:C16($labelMethod)#0)
 				

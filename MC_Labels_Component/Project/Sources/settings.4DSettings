@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><preferences stamp="28858">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="28859">
 	<com.4d>
 		<web>
 			<standalone_server>
@@ -20,7 +20,7 @@
 			<engine case_sensitive="true"/>
 		</sql>
 		<interface>
-			<user flush_window="false" print_progress="false"/>
+			<user color_scheme="light" flush_window="false" print_progress="false"/>
 			<shortcuts>
 				<accept_input_form alt="false" command="false" ctrl="false" key_code="0" shift="false"/>
 				<add_subform alt="false" command="false" ctrl="false" key_code="0" shift="false"/>

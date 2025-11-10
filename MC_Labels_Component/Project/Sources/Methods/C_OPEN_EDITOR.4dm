@@ -1,4 +1,4 @@
-//%attributes = {"invisible":true,"shared":true}
+//%attributes = {"invisible":true}
   // ----------------------------------------------------
   // Project method : C_OPEN_EDITOR
   // Database: 4D Labels

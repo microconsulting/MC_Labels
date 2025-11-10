@@ -1,4 +1,4 @@
-﻿{
+{
 	"destination": "detailScreen",
 	"formSizeAnchor": "background",
 	"rightMargin": 0,
@@ -29,7 +29,7 @@
 					"width": 420,
 					"height": 160,
 					"borderRadius": 5,
-					"fill": "transparent",
+					"fill": "automatic",
 					"stroke": "automatic"
 				},
 				"ok": {

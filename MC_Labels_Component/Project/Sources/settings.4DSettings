@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><preferences stamp="28859">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="28860">
 	<com.4d>
 		<web>
 			<standalone_server>
@@ -35,7 +35,7 @@
 		</general>
 		<compiler>
 			<typage default_for_button="2" default_for_numeric="2"/>
-			<options compilation_path="3" fat_binary="true"/>
+			<options compilation_path="3" fat_binary="true" target="all"/>
 			<method_suffix arrays="" interprocess_arrays="" interprocess_variables="" methods="" variables=""/>
 		</compiler>
 		<server>
